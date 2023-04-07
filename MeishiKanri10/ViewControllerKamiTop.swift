@@ -18,11 +18,10 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
     
     var meishilist: [Uri] = []
     
-    var VCKamiResist: ViewControllerKamiResist?
+//    var VCKamiResist: ViewControllerKamiResist?
     
     //撮影結果
     var resultImage:UIImage? = nil
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,21 +57,6 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
             }
         }
         
-        //test
-        let (oldsuccess, olderrorMessage, oldcount) = DBServiceKami.shared.getUriCount()
-        
-        var oldid = oldcount + 1
-        
-        let uri1 = Uri(id: oldid, name: "名前", uritext: "https://lit.link", biko: "備考")
-        
-        print(uri1)
-        
-        if DBServiceKami.shared.insertUriDB(meishi: uri1) {
-            print("Insert success")
-            print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
-        } else {
-            print("Insert Failed")
-        }
         //kokomade
         
     }
@@ -94,8 +78,24 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
     //　撮影が完了時した時に呼ばれる
     func imagePickerController(_ imagePicker: UIImagePickerController,
             didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        imagePicker.dismiss(animated: true)
+        guard let image = info[.originalImage] as? UIImage else {
+                print("Image not found.")
+                return
+            }
 //        print("Camera fin")
+        resultImage = image
+        performSegue(withIdentifier: "toKamiResist", sender: nil)
 
+    }
+    
+    //画面遷移が起きると呼ばれるメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toKamiResist" {
+            let sendImage = segue.destination as? ViewControllerKamiResist
+
+            sendImage?.recvImage = resultImage
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -104,7 +104,6 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
     
     //追加
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell: UITableViewCell = digitalTableView.dequeueReusableCell(withIdentifier: "DigitalCell", for: indexPath)
         
         guard let cell = kamiTableView.dequeueReusableCell(withIdentifier: "KamiCell", for: indexPath) as? KamiTableViewCell else {
                 fatalError("Dequeue failed: DigitalCell.")
@@ -117,12 +116,7 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        if let indexPath = digitalTableView.indexPathForSelectedRow{
-//            digitalTableView.deselectRow(at: indexPath, animated: true)
-//        }
         kamiTableView.reloadData()
-//        loadView()
-//        viewDidLoad()
     }
     
     @IBAction func onClickKamiDel(_ sender: UIButton) {

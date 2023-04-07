@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewControllerDigitalResist: UIViewController {
+class ViewControllerDigitalResist: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var labelBiko: UILabel!
     @IBOutlet weak var labelName: UILabel!
@@ -21,6 +21,9 @@ class ViewControllerDigitalResist: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textfName.delegate = self
+        textfBiko.delegate = self
 
         btDigitalResist.tintColor = Color.Palette.DigitalMeishiButton
         btDigitalResist.setTitleColor(Color.Palette.Black, for: .normal)
@@ -52,6 +55,21 @@ class ViewControllerDigitalResist: UIViewController {
     }
     
 
+    @IBAction func inputBikoDigital(_ sender: Any) {
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      //リターンキーが押された時に実行される
+        // 今フォーカスが当たっているテキストボックスからフォーカスを外す
+        textField.resignFirstResponder()
+        // 次のTag番号を持っているテキストボックスがあれば、フォーカスする
+        let nextTag = textField.tag + 1
+        if let nextTextField = self.view.viewWithTag(nextTag) {
+            nextTextField.becomeFirstResponder()
+        }
+        return true
+    }
+    
     /*
     // MARK: - Navigation
 

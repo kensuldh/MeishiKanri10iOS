@@ -51,17 +51,6 @@ class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
     
     @IBAction func onClickKamiResist(_ sender: Any) {
         
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetChangeRequest.creationRequestForAsset(from: self.recvImage!)
-        }) { [weak self] (success, error) in
-            DispatchQueue.main.async {
-                if error != nil {
-                    // エラーのアラート表示
-                } else {
-                    // 保存完了のアラート表示
-                }
-            }
-        }
         print(recvAsset as Any)
         let filename = recvAsset.value(forKey: "filename")
         print("filename",filename as Any)

@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Photos
 
 class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
@@ -18,10 +19,9 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
     
     var meishilist: [Uri] = []
     
-//    var VCKamiResist: ViewControllerKamiResist?
-    
     //撮影結果
     var resultImage:UIImage? = nil
+    var resultAsset:PHAsset? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,6 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
             }
         }
         
-        //kokomade
         
     }
     
@@ -83,7 +82,22 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
                 print("Image not found.")
                 return
             }
-//        print("Camera fin")
+        
+        do {
+              var localIdentifier: String?
+              try PHPhotoLibrary.shared().performChangesAndWait {
+                  let changeRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
+                  localIdentifier = changeRequest.placeholderForCreatedAsset?.localIdentifier
+              }
+              guard let identifier = localIdentifier,
+                    let asset = PHAsset.fetchAssets(withLocalIdentifiers: [identifier], options: nil).firstObject else {
+                  fatalError("取得に失敗しました")
+                  return
+              }
+            resultAsset = asset
+          } catch {
+              fatalError(error.localizedDescription)
+          }
         resultImage = image
         performSegue(withIdentifier: "toKamiResist", sender: nil)
 
@@ -93,8 +107,10 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toKamiResist" {
             let sendImage = segue.destination as? ViewControllerKamiResist
+            let sendAsset = segue.destination as? ViewControllerKamiResist
 
             sendImage?.recvImage = resultImage
+            sendAsset?.recvAsset = resultAsset!
         }
     }
     

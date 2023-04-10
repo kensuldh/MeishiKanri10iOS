@@ -7,16 +7,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9BC6B37C-61D9-47D3-9671-78ACDF24CE9F"
-            shouldBeEnabled = "No"
+            uuid = "1CDE08BB-B091-488A-AD6D-ED7F9B0A49A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeishiKanri10/ViewControllerKamiResist.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "onClickKamiResist(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1CDE08BB-B091-488A-AD6D-ED7F9B0A49A8 - 2e5dafb78da2fb09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeishiKanri10.ViewControllerKamiResist.onClickKamiResist(Any) -&gt; ()"
+                  moduleName = "MeishiKanri10"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sakaikensuke/Desktop/MeishiKanri10/MeishiKanri10/ViewControllerKamiResist.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "1CDE08BB-B091-488A-AD6D-ED7F9B0A49A8 - 307d42df15cea73c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in MeishiKanri10.ViewControllerKamiResist.onClickKamiResist(Any) -&gt; ()"
+                  moduleName = "MeishiKanri10"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sakaikensuke/Desktop/MeishiKanri10/MeishiKanri10/ViewControllerKamiResist.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43DAA66B-2084-46E0-9AA7-54CDB7DEF8C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeishiKanri10/ViewControllerKamiResist.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "onClickKamiResist(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7616F3D4-13D2-4E2A-8B7F-8A47D651F8C3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeishiKanri10/ViewControllerKamiResist.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "onClickKamiResist(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7616F3D4-13D2-4E2A-8B7F-8A47D651F8C3 - 68c66179b7506eef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Foundation.URL) -&gt; () in MeishiKanri10.ViewControllerKamiResist.onClickKamiResist(Any) -&gt; ()"
+                  moduleName = "MeishiKanri10"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sakaikensuke/Desktop/MeishiKanri10/MeishiKanri10/ViewControllerKamiResist.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "1768">
+               </Location>
+               <Location
+                  uuid = "7616F3D4-13D2-4E2A-8B7F-8A47D651F8C3 - 68c66179b7506eef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Foundation.URL) -&gt; () in MeishiKanri10.ViewControllerKamiResist.onClickKamiResist(Any) -&gt; ()"
+                  moduleName = "MeishiKanri10"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sakaikensuke/Desktop/MeishiKanri10/MeishiKanri10/ViewControllerKamiResist.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "2976">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F90F544B-427D-4EE2-A8EF-39280F29AF13"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MeishiKanri10/ViewControllerKamiTop.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

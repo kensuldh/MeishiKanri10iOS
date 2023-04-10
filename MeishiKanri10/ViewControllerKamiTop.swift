@@ -36,28 +36,31 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
         kamiTableView.delegate = self
         
         let (success, errorMessage, count) = DBServiceKami.shared.getUriCount()
-        print(count)
-        
-        meishilist.removeAll()
-        
-        print(meishilist)
-        if(count != 0){
-            for i in 1...count {
-                let (success, errorMessage, uri) = DBServiceKami.shared.getUriDB(ID: i)
-                if(success){
-                    if let uri = uri {
-                        print(uri)
-                        meishilist.append(Uri(id: uri.ID, name: uri.Name, uritext: uri.UriText, biko: uri.Biko))
+        if success{
+            print(count)
+            
+            meishilist.removeAll()
+            
+            print(meishilist)
+            if(count != 0){
+                for i in 1...count {
+                    let (success, errorMessage, uri) = DBServiceKami.shared.getUriDB(ID: i)
+                    if(success){
+                        if let uri = uri {
+                            print(uri)
+                            meishilist.append(Uri(id: uri.ID, name: uri.Name, uritext: uri.UriText, biko: uri.Biko))
+                        } else {
+                            print("Uri not found")
+                        }
                     } else {
-                        print("Uri not found")
+                        print(errorMessage ?? "Error")
                     }
-                } else {
-                    print(errorMessage ?? "Error")
                 }
             }
+            
+        }else{
+            print(errorMessage as Any)
         }
-        
-        
     }
     
     @IBAction func runCamera(_ sender: Any) {

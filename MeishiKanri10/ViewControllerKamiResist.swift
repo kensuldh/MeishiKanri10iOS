@@ -55,7 +55,7 @@ class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
             PHAssetChangeRequest.creationRequestForAsset(from: self.recvImage!)
         }) { [weak self] (success, error) in
             DispatchQueue.main.async {
-                if let error = error {
+                if error != nil {
                     // エラーのアラート表示
                 } else {
                     // 保存完了のアラート表示
@@ -64,28 +64,34 @@ class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
         }
         print(recvAsset as Any)
         let filename = recvAsset.value(forKey: "filename")
-        print("filename",filename)
+        print("filename",filename as Any)
         print("\(recvAsset.pixelWidth) x \(recvAsset.pixelHeight)")
         
         getUrl(asset: recvAsset) { (url: URL) in
-            print("obj: \(self.recvAsset)")
+            print("obj: \(String(describing: self.recvAsset))")
             print("url: \(url)")
             self.meishiURL = url
             //DBへの保存処理
             let (oldsuccess, olderrorMessage, oldcount) = DBServiceKami.shared.getUriCount()
             
-            var oldid = oldcount + 1
+            let oldid = oldcount + 1
             
-            let uri1 = Uri(id: oldid, name: self.textfNameKami.text!, uritext: self.meishiURL.absoluteString, biko: self.textfBikoKami.text!)
-            
-            print(uri1)
-            
-            if DBServiceKami.shared.insertUriDB(meishi: uri1) {
-                print("Insert success")
-                print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
-            } else {
-                print("Insert Failed")
+            if oldsuccess {
+                let uri1 = Uri(id: oldid, name: self.textfNameKami.text!, uritext: self.meishiURL.absoluteString, biko: self.textfBikoKami.text!)
+                
+                print(uri1)
+                
+                if DBServiceKami.shared.insertUriDB(meishi: uri1) {
+                    print("Insert success")
+                    print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
+                } else {
+                    print("Insert Failed")
+                }
+            }else{
+                print(olderrorMessage as Any)
             }
+            
+
             
             self.performSegue(withIdentifier: "toKamiTop", sender: nil)
         }

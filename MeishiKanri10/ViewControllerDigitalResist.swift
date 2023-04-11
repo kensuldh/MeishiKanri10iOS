@@ -37,19 +37,23 @@ class ViewControllerDigitalResist: UIViewController, UITextFieldDelegate {
     @IBAction func onClickDigitalResist(_ sender: Any) {
         let (oldsuccess, olderrorMessage, oldcount) = DBService.shared.getUriCount()
         
-        var oldid = oldcount + 1
-        
-        let uri1 = Uri(id: oldid, name: textfName.text!, uritext: "https://lit.link", biko: textfBiko.text!)
-        
-        print(uri1)
-        
-        if DBService.shared.insertUriDB(uri: uri1) {
-            print("Insert success")
-            print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
-        } else {
-            print("Insert Failed")
+        if oldsuccess {
+            var oldid = oldcount + 1
+            
+            let uri1 = Uri(id: oldid, name: textfName.text!, uritext: "https://lit.link", biko: textfBiko.text!)
+            
+            print(uri1)
+            
+            if DBService.shared.insertUriDB(uri: uri1) {
+                print("Insert success")
+                print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
+            } else {
+                print("Insert Failed")
+            }
+            
+        }else{
+            print(olderrorMessage as Any)
         }
-        
         self.performSegue(withIdentifier: "toDigitalTop", sender: nil)
         
     }

@@ -63,9 +63,8 @@ class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
             //DBへの保存処理
             let (oldsuccess, olderrorMessage, oldcount) = DBServiceKami.shared.getUriCount()
             
-            let oldid = oldcount + 1
-            
             if oldsuccess {
+                let oldid = oldcount + 1
                 let uri1 = Uri(id: oldid, name: self.textfNameKami.text!, uritext: self.meishiURL.absoluteString, biko: self.textfBikoKami.text!)
                 
                 print(uri1)

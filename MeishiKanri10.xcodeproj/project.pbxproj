@@ -27,6 +27,7 @@
 		7DABCD5929C6F24800E1ED60 /* MeishiKanri10UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABCD5829C6F24800E1ED60 /* MeishiKanri10UITestsLaunchTests.swift */; };
 		7DABCD6529C6F48200E1ED60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABCD3929C6F24600E1ED60 /* ViewController.swift */; };
 		7DB03CEC29C9775F0083EFC3 /* Uri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB03CEB29C9775F0083EFC3 /* Uri.swift */; };
+		7DDC5C8729E5B60C00A8FB0B /* ViewControllerDigitalUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC5C8629E5B60C00A8FB0B /* ViewControllerDigitalUpdate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		7DABCD5629C6F24800E1ED60 /* MeishiKanri10UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeishiKanri10UITests.swift; sourceTree = "<group>"; };
 		7DABCD5829C6F24800E1ED60 /* MeishiKanri10UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeishiKanri10UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7DB03CEB29C9775F0083EFC3 /* Uri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uri.swift; sourceTree = "<group>"; };
+		7DDC5C8629E5B60C00A8FB0B /* ViewControllerDigitalUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDigitalUpdate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				7D618A3929D80646006BB47E /* KamiTableViewCell.swift */,
 				7D78F26529CED63300077D4C /* ViewControllerDigitalResist.swift */,
 				7DABCD3B29C6F24600E1ED60 /* Main.storyboard */,
+				7DDC5C8629E5B60C00A8FB0B /* ViewControllerDigitalUpdate.swift */,
 				7D618A3329D7CCB1006BB47E /* ViewControllerKamiResist.swift */,
 				7DABCD3E29C6F24700E1ED60 /* Assets.xcassets */,
 				7D7CE75129C95D7100483B90 /* Color.xcassets */,
@@ -298,6 +301,7 @@
 				7D78F26629CED63300077D4C /* ViewControllerDigitalResist.swift in Sources */,
 				7DABCD6529C6F48200E1ED60 /* ViewController.swift in Sources */,
 				7D22EB6D29C93D4D007CB36F /* DBService.swift in Sources */,
+				7DDC5C8729E5B60C00A8FB0B /* ViewControllerDigitalUpdate.swift in Sources */,
 				7D7CE75629C9711D00483B90 /* ViewControllerDigitalTop.swift in Sources */,
 				7D9233DD29CE0DC500247825 /* DigitalTableViewCell.swift in Sources */,
 				7D618A3629D7DF7B006BB47E /* DBServiceKami.swift in Sources */,

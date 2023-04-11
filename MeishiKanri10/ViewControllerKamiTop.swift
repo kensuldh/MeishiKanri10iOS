@@ -134,6 +134,15 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // アクションを実装
+        print("\(indexPath.row)番目の行が選択されました。")
+        print(meishilist[indexPath.row].ID)
+        print(meishilist[indexPath.row].Biko)
+        print(meishilist[indexPath.row].Name)
+        print(meishilist[indexPath.row].UriText)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         kamiTableView.reloadData()
     }

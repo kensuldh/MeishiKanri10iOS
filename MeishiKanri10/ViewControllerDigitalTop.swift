@@ -12,12 +12,12 @@ class ViewControllerDigitalTop: UIViewController, UITableViewDelegate, UITableVi
     
     
     @IBOutlet weak var btToResistPage: UIButton!
-    
     @IBOutlet weak var btBackDigitalTop: UIButton!
     
     @IBOutlet weak var digitalTableView: UITableView!
     
     var urilist: [Uri] = []
+    var sendDigitalID:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +83,19 @@ class ViewControllerDigitalTop: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // アクションを実装
+        print("\(indexPath.row)番目の行が選択されました。")
+        print(urilist[indexPath.row].ID)
+        print(urilist[indexPath.row].Biko)
+        print(urilist[indexPath.row].Name)
+        print(urilist[indexPath.row].UriText)
+        
+        sendDigitalID = urilist[indexPath.row].ID
+        
+        performSegue(withIdentifier: "toDigitalUpdate", sender: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
 //        if let indexPath = digitalTableView.indexPathForSelectedRow{
 //            digitalTableView.deselectRow(at: indexPath, animated: true)
@@ -92,6 +105,14 @@ class ViewControllerDigitalTop: UIViewController, UITableViewDelegate, UITableVi
 //        viewDidLoad()
     }
 
+    //画面遷移が起きると呼ばれるメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDigitalUpdate" {
+            let DigitalID = segue.destination as? ViewControllerDigitalUpdate
+
+            DigitalID?.recvDigitalID = sendDigitalID
+        }
+    }
     
     @IBAction func onClickDigitalDel(_ sender: UIButton) {
 

@@ -60,6 +60,117 @@
             </objects>
             <point key="canvasLocation" x="102" y="4"/>
         </scene>
+        <!--View Controller Digital Update-->
+        <scene sceneID="zSx-kj-BVy">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="s00-ZQ-JU7" customClass="ViewControllerDigitalUpdate" customModule="MeishiKanri10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X5S-X2-ObR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="106-K4-2m4">
+                                <rect key="frame" x="54" y="192.66666666666666" width="45" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="備考" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnX-C0-085">
+                                <rect key="frame" x="54" y="259.33333333333331" width="45" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名前" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TdR-at-cHE">
+                                <rect key="frame" x="109" y="192.66666666666666" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="sRn-UO-yox"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="備考" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GK8-V6-UW5">
+                                <rect key="frame" x="109" y="259.33333333333331" width="250" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="rH4-8u-83w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputBikoDigitalUp:" destination="s00-ZQ-JU7" eventType="editingDidEndOnExit" id="zDB-o5-oZH"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-ff-cUk">
+                                <rect key="frame" x="54" y="326" width="41" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uritext" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25O-nn-c7A">
+                                <rect key="frame" x="109" y="333" width="44" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lku-q1-Wfz">
+                                <rect key="frame" x="65" y="373" width="59" height="35"/>
+                                <color key="tintColor" red="0.92128556969999997" green="0.4622020208" blue="0.48000660540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="更新">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onClickDigitalUpdate:" destination="s00-ZQ-JU7" eventType="touchUpInside" id="7Ov-vf-hiV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWr-HD-uX7">
+                                <rect key="frame" x="237" y="373" width="111" height="35"/>
+                                <color key="tintColor" red="0.92128556969999997" green="0.4622020208" blue="0.48000660540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="キャンセル">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="dwA-ha-NlV" kind="show" id="AkI-b4-CO9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pqu-iC-ZdU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rWr-HD-uX7" firstAttribute="top" secondItem="lku-q1-Wfz" secondAttribute="top" id="3JE-MJ-b56"/>
+                            <constraint firstItem="25O-nn-c7A" firstAttribute="top" secondItem="g8c-ff-cUk" secondAttribute="top" constant="7" id="4T8-Md-rR3"/>
+                            <constraint firstItem="25O-nn-c7A" firstAttribute="leading" secondItem="GK8-V6-UW5" secondAttribute="leading" id="6hi-ir-kHa"/>
+                            <constraint firstItem="GK8-V6-UW5" firstAttribute="trailing" secondItem="rWr-HD-uX7" secondAttribute="trailing" constant="11" id="Fzr-ah-rqn"/>
+                            <constraint firstItem="TdR-at-cHE" firstAttribute="trailing" secondItem="GK8-V6-UW5" secondAttribute="trailing" id="Vqc-Rq-XjA"/>
+                            <constraint firstItem="GK8-V6-UW5" firstAttribute="top" secondItem="GnX-C0-085" secondAttribute="top" id="csX-tp-8fS"/>
+                            <constraint firstItem="106-K4-2m4" firstAttribute="centerX" secondItem="X5S-X2-ObR" secondAttribute="centerX" constant="-120" id="fFX-oh-m3Y"/>
+                            <constraint firstItem="GnX-C0-085" firstAttribute="leading" secondItem="106-K4-2m4" secondAttribute="leading" id="fRn-gL-ACE"/>
+                            <constraint firstItem="lku-q1-Wfz" firstAttribute="leading" secondItem="g8c-ff-cUk" secondAttribute="leading" constant="11" id="gvY-aR-gFz"/>
+                            <constraint firstItem="g8c-ff-cUk" firstAttribute="top" secondItem="GnX-C0-085" secondAttribute="bottom" constant="39.670000000000002" id="gvi-xJ-nv2"/>
+                            <constraint firstItem="g8c-ff-cUk" firstAttribute="leading" secondItem="GnX-C0-085" secondAttribute="leading" id="iGb-l6-dW0"/>
+                            <constraint firstItem="lku-q1-Wfz" firstAttribute="top" secondItem="g8c-ff-cUk" secondAttribute="bottom" constant="20" id="ije-OD-1aC"/>
+                            <constraint firstItem="TdR-at-cHE" firstAttribute="leading" secondItem="106-K4-2m4" secondAttribute="trailing" constant="10" id="pKC-g2-z48"/>
+                            <constraint firstItem="GK8-V6-UW5" firstAttribute="leading" secondItem="TdR-at-cHE" secondAttribute="leading" id="sPO-YC-3Ga"/>
+                            <constraint firstItem="GnX-C0-085" firstAttribute="top" secondItem="106-K4-2m4" secondAttribute="bottom" constant="39.670000000000002" id="tOW-zN-DWR"/>
+                            <constraint firstItem="TdR-at-cHE" firstAttribute="top" secondItem="106-K4-2m4" secondAttribute="top" id="v5k-Ip-OTe"/>
+                            <constraint firstItem="106-K4-2m4" firstAttribute="centerY" secondItem="X5S-X2-ObR" secondAttribute="centerY" constant="-220" id="vcJ-pQ-HbK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btDigitalUpCancel" destination="rWr-HD-uX7" id="XW7-Ts-Byq"/>
+                        <outlet property="btDigitalUpdate" destination="lku-q1-Wfz" id="XcV-gW-xij"/>
+                        <outlet property="labelBikoDigitalUp" destination="GnX-C0-085" id="8Ki-SJ-lbz"/>
+                        <outlet property="labelNameDigitalUp" destination="106-K4-2m4" id="xbk-Tk-TNf"/>
+                        <outlet property="labelUriDigitalUp" destination="g8c-ff-cUk" id="whJ-HK-IlF"/>
+                        <outlet property="labelUritextDigitalUp" destination="25O-nn-c7A" id="LoR-va-HcN"/>
+                        <outlet property="textfBikoDigitalUp" destination="GK8-V6-UW5" id="mEb-bh-DdP"/>
+                        <outlet property="textfNameDigitalUp" destination="TdR-at-cHE" id="R0f-lA-Xuj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="It1-Aa-erZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2071" y="-641"/>
+        </scene>
         <!--View Controller DigitalMeishiResist-->
         <scene sceneID="Ef4-KR-Zq8">
             <objects>
@@ -100,7 +211,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvb-aX-Peo">
-                                <rect key="frame" x="224" y="313" width="111" height="35"/>
+                                <rect key="frame" x="237" y="313" width="111" height="35"/>
                                 <color key="tintColor" name="DigitalMeishiButton"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="キャンセル">
@@ -126,7 +237,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ROe-dd-4Ak" firstAttribute="leading" secondItem="6Sd-BN-fXU" secondAttribute="trailing" constant="10" id="1hP-Jy-3J8"/>
-                            <constraint firstItem="Rvb-aX-Peo" firstAttribute="leading" secondItem="idN-nv-Ila" secondAttribute="trailing" constant="100" id="4uW-8i-5RS"/>
+                            <constraint firstItem="jrJ-m1-ywc" firstAttribute="trailing" secondItem="Rvb-aX-Peo" secondAttribute="trailing" constant="11" id="4uW-8i-5RS"/>
                             <constraint firstItem="ROe-dd-4Ak" firstAttribute="trailing" secondItem="jrJ-m1-ywc" secondAttribute="trailing" id="6rS-YS-Gag"/>
                             <constraint firstItem="idN-nv-Ila" firstAttribute="top" secondItem="jrJ-m1-ywc" secondAttribute="bottom" constant="20" id="E7S-Si-QkR"/>
                             <constraint firstItem="Psl-dV-NKR" firstAttribute="top" secondItem="6Sd-BN-fXU" secondAttribute="bottom" constant="39.670000000000002" id="Efb-7B-93x"/>
@@ -264,6 +375,7 @@
                         <outlet property="btBackDigitalTop" destination="uAw-bv-CfN" id="Gsb-sw-wg0"/>
                         <outlet property="btToResistPage" destination="Z9D-qa-wOB" id="Vv6-gz-AwX"/>
                         <outlet property="digitalTableView" destination="lOO-84-Y48" id="8Cv-8R-o9q"/>
+                        <segue destination="s00-ZQ-JU7" kind="presentation" identifier="toDigitalUpdate" id="qOz-ya-XDa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJH-b0-9Vi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -487,7 +599,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="xeF-Cs-hhc"/>
         <segue reference="fcB-GV-j3B"/>
-        <segue reference="kJa-XT-dhQ"/>
+        <segue reference="AkI-b4-CO9"/>
+        <segue reference="t2o-bF-ztH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Batsu" width="1874" height="1882"/>

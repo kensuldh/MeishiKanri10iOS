@@ -163,25 +163,51 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func onClickKamiDel(_ sender: UIButton) {
-
-        // indexPathを取得
-        if let indexPath = kamiTableView.indexPath(for: sender.superview!.superview as! UITableViewCell) {
-            print(indexPath.row)
-//            print()
-            print(meishilist[indexPath.row])
+        
+        //アラート生成
+        //UIAlertControllerのスタイルがalert
+        let alert: UIAlertController = UIAlertController(title: "確認", message:  "削除してもよろしいですか？", preferredStyle:  UIAlertController.Style.alert)
+        // 確定ボタンの処理
+        let confirmAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{ [self]
+            // 確定ボタンが押された時の処理をクロージャ実装する
+            (action: UIAlertAction!) -> Void in
+            //実際の処理
+            print("確定")
             
-            if DBServiceKami.shared.deleteUriDB(ID: meishilist[indexPath.row].ID) {
-                print("Delete success")
+            // indexPathを取得
+            if let indexPath = kamiTableView.indexPath(for: sender.superview!.superview as! UITableViewCell) {
+                print(indexPath.row)
+    //            print()
+                print(meishilist[indexPath.row])
+                
+                if DBServiceKami.shared.deleteUriDB(ID: meishilist[indexPath.row].ID) {
+                    print("Delete success")
+                } else {
+                    print("Delete Failed")
+                }
+                
+                loadView()
+                viewDidLoad()
+                
             } else {
-                print("Delete Failed")
+                //ここには来ないはず
+                print("indexPath not found.")
             }
-            
-            loadView()
-            viewDidLoad()
-            
-        } else {
-            //ここには来ないはず
-            print("indexPath not found.")
-        }
+        })
+        // キャンセルボタンの処理
+        let cancelAction: UIAlertAction = UIAlertAction(title: "NO", style: UIAlertAction.Style.cancel, handler:{
+            // キャンセルボタンが押された時の処理をクロージャ実装する
+            (action: UIAlertAction!) -> Void in
+            //実際の処理
+            print("キャンセル")
+        })
+
+        //UIAlertControllerにキャンセルボタンと確定ボタンをActionを追加
+        alert.addAction(cancelAction)
+        alert.addAction(confirmAction)
+
+        //実際にAlertを表示する
+        present(alert, animated: true, completion: nil)
+        
     }
 }

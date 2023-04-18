@@ -21,6 +21,7 @@ class ViewControllerDigitalUpdate: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btDigitalUpCancel: UIButton!
     
     var recvDigitalID:Int!
+    var updateUri:Uri!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,8 @@ class ViewControllerDigitalUpdate: UIViewController, UITextFieldDelegate {
         let(success, errorMessage, uri) = DBService.shared.getUriDB(ID: recvDigitalID)
         print(uri)
         
+        updateUri = uri
+        
         textfNameDigitalUp.text = uri?.Name
         textfBikoDigitalUp.text = uri?.Biko
         labelUritextDigitalUp.text = uri?.UriText
@@ -46,8 +49,12 @@ class ViewControllerDigitalUpdate: UIViewController, UITextFieldDelegate {
     
     @IBAction func onClickDigitalUpdate(_ sender: Any) {
         
+        updateUri.Name = textfNameDigitalUp.text!
+        updateUri.Biko = textfBikoDigitalUp.text!
         
-        
+        DBService.shared.updateUriDB(uri: updateUri)
+        print("UpdateUriDB!")
+        self.performSegue(withIdentifier: "toDigitalTopfromUpdate", sender: nil)
     }
     
     

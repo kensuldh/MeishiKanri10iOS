@@ -9,7 +9,7 @@ import UIKit
 import Photos
 
 class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
-
+    
     
     @IBOutlet weak var labelNameKami: UILabel!
     @IBOutlet weak var labelBikoKami: UILabel!
@@ -25,11 +25,13 @@ class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var imagevKamiMeishi: UIImageView!
     
     var meishiURL:URL!
-
+    
     var recvImage:UIImage? = nil
     var recvAsset:PHAsset!
     
     var photoAssets:PHAsset? = nil // フォトライブラリ保持用
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +39,7 @@ class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
         textfNameKami.delegate = self
         textfBikoKami.delegate = self
         
-
+        
         btKamiResist.tintColor = Color.Palette.KamiMeishiButton
         btKamiResist.setTitleColor(Color.Palette.Black, for: .normal)
         
@@ -51,44 +53,88 @@ class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
     
     @IBAction func onClickKamiResist(_ sender: Any) {
         
-        print(recvAsset as Any)
-        let filename = recvAsset.value(forKey: "filename")
-        print("filename",filename as Any)
-        print("\(recvAsset.pixelWidth) x \(recvAsset.pixelHeight)")
+//                print(recvAsset as Any)
+//                let filename = recvAsset.value(forKey: "filename")
+//                print("filename",filename as Any)
+//                print("\(recvAsset.pixelWidth) x \(recvAsset.pixelHeight)")
+//
+//                getUrl(asset: recvAsset) { (url: URL) in
+//                    print("obj: \(String(describing: self.recvAsset))")
+//                    print("url: \(url)")
+//                    self.meishiURL = url
+//                    //DBへの保存処理
+//                    let (oldsuccess, olderrorMessage, oldcount) = DBServiceKami.shared.getUriCount()
+//
+//                    if oldsuccess {
+//                        let oldid = oldcount + 1
+//                        let uri1 = Uri(id: oldid, name: self.textfNameKami.text!, uritext: self.meishiURL.absoluteString, biko: self.textfBikoKami.text!)
+//
+//                        print(uri1)
+//
+//                        if DBServiceKami.shared.insertUriDB(meishi: uri1) {
+//                            print("Insert success")
+//                            print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
+//                        } else {
+//                            print("Insert Failed")
+//                        }
+//                    }else{
+//                        print(olderrorMessage as Any)
+//                    }
         
-        getUrl(asset: recvAsset) { (url: URL) in
-            print("obj: \(String(describing: self.recvAsset))")
-            print("url: \(url)")
-            self.meishiURL = url
-            //DBへの保存処理
-            let (oldsuccess, olderrorMessage, oldcount) = DBServiceKami.shared.getUriCount()
-            
-            if oldsuccess {
-                let oldid = oldcount + 1
-                let uri1 = Uri(id: oldid, name: self.textfNameKami.text!, uritext: self.meishiURL.absoluteString, biko: self.textfBikoKami.text!)
-                
-                print(uri1)
-                
-                if DBServiceKami.shared.insertUriDB(meishi: uri1) {
-                    print("Insert success")
-                    print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
-                } else {
-                    print("Insert Failed")
-                }
-            }else{
-                print(olderrorMessage as Any)
-            }
-            
+        let dt = Date()
+        let dateFormatter = DateFormatter()
 
-            
-            self.performSegue(withIdentifier: "toKamiTop", sender: nil)
+        dateFormatter.calendar = Calendar(identifier: .gregorian)
+        dateFormatter.locale = Locale(identifier: "ja_JP")
+        dateFormatter.timeZone = TimeZone(identifier:  "Asia/Tokyo")
+         
+        /// 変換フォーマット定義（未設定の場合は自動フォーマットが採用される）
+        dateFormatter.dateFormat = "yyyyMdHms"
+        
+        print(dateFormatter.string(from: dt))
+        let fileName = dateFormatter.string(from: dt)
+        let fileURL = getFileURL(fileName: "\(fileName).jpg")
+        
+        guard let imageData = imagevKamiMeishi.image?.jpegData(compressionQuality: 1.0) else {
+            return
         }
- 
-        //写真をカメラロールに保存
-
+        do {
+            try imageData.write(to: getFileURL(fileName: "\(fileName).jpg"))
+            print("Image saved.")
+        } catch {
+            print("Failed to save the image:", error)
+        }
         
+        let path = getFileURL(fileName: "\(fileName).jpg").path
+        
+        //DBへの保存処理
+        let (oldsuccess, olderrorMessage, oldcount) = DBServiceKami.shared.getUriCount()
 
+        if oldsuccess {
+            let oldid = oldcount + 1
+            let uri1 = Uri(id: oldid, name: self.textfNameKami.text!, uritext: path, biko: self.textfBikoKami.text!)
+
+            print(uri1)
+
+            if DBServiceKami.shared.insertUriDB(meishi: uri1) {
+                print("Insert success")
+                print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true))
+            } else {
+                print("Insert Failed")
+            }
+        }else{
+            print(olderrorMessage as Any)
+        }
+        
+        self.performSegue(withIdentifier: "toKamiTop", sender: nil)
     }
+    
+    //写真をカメラロールに保存
+    
+    
+    
+    
+//}
     
     
     @IBAction func inputBikoKami(_ sender: Any) {
@@ -132,5 +178,10 @@ class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
         default:
             break
         }
+    }
+    
+    func getFileURL(fileName: String) -> URL {
+        let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return docDir.appendingPathComponent(fileName)
     }
 }

@@ -18,6 +18,7 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
     @IBOutlet weak var kamiTableView: UITableView!
     
     var meishilist: [Uri] = []
+    var sendKamiID:Int!
     
     //撮影結果
     var resultImage:UIImage? = nil
@@ -86,21 +87,25 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
                 return
             }
         
-        do {
-              var localIdentifier: String?
-              try PHPhotoLibrary.shared().performChangesAndWait {
-                  let changeRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
-                  localIdentifier = changeRequest.placeholderForCreatedAsset?.localIdentifier
-              }
-              guard let identifier = localIdentifier,
-                    let asset = PHAsset.fetchAssets(withLocalIdentifiers: [identifier], options: nil).firstObject else {
-                  fatalError("取得に失敗しました")
-                  return
-              }
-            resultAsset = asset
-          } catch {
-              fatalError(error.localizedDescription)
-          }
+//        do {
+//              var localIdentifier: String?
+//              try PHPhotoLibrary.shared().performChangesAndWait {
+//                  let changeRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
+//                  localIdentifier = changeRequest.placeholderForCreatedAsset?.localIdentifier
+//              }
+//              guard let identifier = localIdentifier,
+//                    let asset = PHAsset.fetchAssets(withLocalIdentifiers: [identifier], options: nil).firstObject else {
+//                  fatalError("取得に失敗しました")
+//                  return
+//              }
+//            resultAsset = asset
+//          } catch {
+//              fatalError(error.localizedDescription)
+//          }
+        
+//        guard let imageData = imageView.image?.jpegData(compressionQuality: 1.0) else {
+//                return
+//            }
         resultImage = image
         performSegue(withIdentifier: "toKamiResist", sender: nil)
 
@@ -113,7 +118,13 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
             let sendAsset = segue.destination as? ViewControllerKamiResist
 
             sendImage?.recvImage = resultImage
-            sendAsset?.recvAsset = resultAsset!
+//            sendAsset?.recvAsset = resultAsset!
+        }
+        
+        if segue.identifier == "toKamiUpdate" {
+            let KamiID = segue.destination as? ViewControllerKamiUpdate
+
+            KamiID?.recvKamiID = sendKamiID
         }
     }
     
@@ -141,6 +152,10 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
         print(meishilist[indexPath.row].Biko)
         print(meishilist[indexPath.row].Name)
         print(meishilist[indexPath.row].UriText)
+        
+        sendKamiID = meishilist[indexPath.row].ID
+        
+        performSegue(withIdentifier: "toKamiUpdate", sender: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

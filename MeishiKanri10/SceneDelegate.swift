@@ -16,7 +16,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        if let url = connectionOptions.urlContexts.first?.url {
+            // ③
+            print(url)
+            if url.host == "next" {
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let resultVC = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerDigitalScan")
+                self.window?.rootViewController = resultVC
+                self.window?.backgroundColor = UIColor.white
+                self.window?.makeKeyAndVisible()
+            }
+        }
+        
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        
+        guard let url = URLContexts.first?.url,
+            let components = URLComponents(string: url.absoluteString),
+            let host = components.host else {
+            return
+        }
+        
+        if host == "next" {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let resultVC = mainStoryboard.instantiateViewController(withIdentifier: "ViewControllerDigitalScan")
+            self.window?.rootViewController = resultVC
+            self.window?.backgroundColor = UIColor.white
+            self.window?.makeKeyAndVisible()
+        }
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

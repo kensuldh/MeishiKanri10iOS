@@ -36,6 +36,10 @@ class ViewControllerKamiTop: UIViewController,UITableViewDelegate, UITableViewDa
         kamiTableView.dataSource = self
         kamiTableView.delegate = self
         
+        kamiTableView.backgroundColor = .white
+        
+        
+        
         let (success, errorMessage, count) = DBServiceKami.shared.getUriCount()
         if success{
             print(count)

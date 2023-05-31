@@ -17,6 +17,8 @@ class KamiTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         btKamiBatsu.tintColor = Color.Palette.Red
+        cellKamiBiko.textColor = .black
+        cellKamiName.textColor = .black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

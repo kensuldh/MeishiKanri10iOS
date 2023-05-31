@@ -48,6 +48,17 @@ class ViewControllerKamiResist: UIViewController, UITextFieldDelegate {
         
         imagevKamiMeishi.image = recvImage
         
+        labelNameKami.textColor = .black
+        labelBikoKami.textColor = .black
+        
+        textfNameKami.textColor = .black
+        textfNameKami.attributedPlaceholder = NSAttributedString(string: "名前", attributes:[NSAttributedString.Key.foregroundColor : UIColor.gray])
+        textfNameKami.setUnderLine()
+        
+        textfBikoKami.textColor = .black
+        textfBikoKami.attributedPlaceholder = NSAttributedString(string: "備考", attributes:[NSAttributedString.Key.foregroundColor : UIColor.gray])
+        textfBikoKami.setUnderLine()
+        
         // Do any additional setup after loading the view.
     }
     

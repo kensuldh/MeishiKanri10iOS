@@ -18,15 +18,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("Run")
-        
+    
         btDigitalMeishi.tintColor = Color.Palette.DigitalMeishiButton
         btDigitalMeishi.setTitleColor(Color.Palette.Black, for: .normal)
         
         btKamiMeishi.tintColor = Color.Palette.KamiMeishiButton
         btKamiMeishi.setTitleColor(Color.Palette.Black, for: .normal)
-        
-        
-        
+    
     }
 
 

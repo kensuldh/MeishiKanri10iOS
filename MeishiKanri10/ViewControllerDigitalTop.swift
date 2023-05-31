@@ -24,6 +24,7 @@ class ViewControllerDigitalTop: UIViewController, UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view.
         print("Run")
         
+        
         btToResistPage.tintColor = Color.Palette.DigitalMeishiButton
         btToResistPage.setTitleColor(Color.Palette.Black, for: .normal)
         
@@ -33,6 +34,7 @@ class ViewControllerDigitalTop: UIViewController, UITableViewDelegate, UITableVi
         digitalTableView.dataSource = self
         digitalTableView.delegate = self
         
+        self.digitalTableView.backgroundColor = .white
         
         let (success, errorMessage, count) = DBService.shared.getUriCount()
         print(count)

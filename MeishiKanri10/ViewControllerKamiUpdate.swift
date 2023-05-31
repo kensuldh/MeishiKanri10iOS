@@ -37,6 +37,17 @@ class ViewControllerKamiUpdate: UIViewController, UITextFieldDelegate {
         btKamiUpCancel.tintColor = Color.Palette.KamiMeishiButton
         btKamiUpCancel.setTitleColor(Color.Palette.Black, for: .normal)
         
+        labelNameKamiUp.textColor = .black
+        labelBikoKamiUp.textColor = .black
+        
+        textfNameKamiUp.textColor = .black
+        textfNameKamiUp.attributedPlaceholder = NSAttributedString(string: "名前", attributes:[NSAttributedString.Key.foregroundColor : UIColor.gray])
+        textfNameKamiUp.setUnderLine()
+        
+        textfBikoKamiUp.textColor = .black
+        textfBikoKamiUp.attributedPlaceholder = NSAttributedString(string: "備考", attributes:[NSAttributedString.Key.foregroundColor : UIColor.gray])
+        textfBikoKamiUp.setUnderLine()
+        
         // スクリーンの縦横サイズを取得
         let screenWidth:CGFloat = view.frame.size.width
         let screenHeight:CGFloat = view.frame.size.height

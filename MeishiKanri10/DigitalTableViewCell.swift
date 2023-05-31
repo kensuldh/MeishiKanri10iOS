@@ -17,6 +17,8 @@ class DigitalTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         btDigitalBatsu.tintColor = Color.Palette.Red
+        cellBiko.textColor = .black
+        cellName.textColor = .black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

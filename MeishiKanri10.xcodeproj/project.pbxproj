@@ -11,6 +11,19 @@
 		7D618A3429D7CCB1006BB47E /* ViewControllerKamiResist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D618A3329D7CCB1006BB47E /* ViewControllerKamiResist.swift */; };
 		7D618A3629D7DF7B006BB47E /* DBServiceKami.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D618A3529D7DF7B006BB47E /* DBServiceKami.swift */; };
 		7D618A3A29D80646006BB47E /* KamiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D618A3929D80646006BB47E /* KamiTableViewCell.swift */; };
+		7D67FF632A24C1F600729B26 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67FF622A24C1F600729B26 /* ShareViewController.swift */; };
+		7D67FF662A24C1F600729B26 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D67FF642A24C1F600729B26 /* MainInterface.storyboard */; };
+		7D67FF6A2A24C1F600729B26 /* MeishiKanri10ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7D67FF602A24C1F600729B26 /* MeishiKanri10ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D67FF712A24CCB300729B26 /* ViewControllerDigitalScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67FF702A24CCB300729B26 /* ViewControllerDigitalScan.swift */; };
+		7D67FF822A24FA0F00729B26 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67FF622A24C1F600729B26 /* ShareViewController.swift */; };
+		7D67FF862A24FBCD00729B26 /* ViewControllerDigitalScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D67FF702A24CCB300729B26 /* ViewControllerDigitalScan.swift */; };
+		7D67FF872A24FBD600729B26 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7CE75129C95D7100483B90 /* Color.xcassets */; };
+		7D67FF882A24FBDE00729B26 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7CE75329C95F7100483B90 /* Color.swift */; };
+		7D67FF892A24FBF300729B26 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D22EB6C29C93D4D007CB36F /* DBService.swift */; };
+		7D67FF8A2A24FC0A00729B26 /* Uri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB03CEB29C9775F0083EFC3 /* Uri.swift */; };
+		7D67FF8D2A26226200729B26 /* IMG_0619_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D67FF8C2A26226200729B26 /* IMG_0619_3.png */; };
+		7D67FF8E2A26226200729B26 /* IMG_0619_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D67FF8C2A26226200729B26 /* IMG_0619_3.png */; };
+		7D67FF8F2A2628A700729B26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DABCD3E29C6F24700E1ED60 /* Assets.xcassets */; };
 		7D78F26629CED63300077D4C /* ViewControllerDigitalResist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D78F26529CED63300077D4C /* ViewControllerDigitalResist.swift */; };
 		7D7CE75229C95D7100483B90 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D7CE75129C95D7100483B90 /* Color.xcassets */; };
 		7D7CE75429C95F7100483B90 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7CE75329C95F7100483B90 /* Color.swift */; };
@@ -29,9 +42,18 @@
 		7DB03CEC29C9775F0083EFC3 /* Uri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB03CEB29C9775F0083EFC3 /* Uri.swift */; };
 		7DDC5C8729E5B60C00A8FB0B /* ViewControllerDigitalUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC5C8629E5B60C00A8FB0B /* ViewControllerDigitalUpdate.swift */; };
 		7DDC5C8929E8345800A8FB0B /* ViewControllerKamiUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC5C8829E8345800A8FB0B /* ViewControllerKamiUpdate.swift */; };
+		7DDC5C8D29F01D4F00A8FB0B /* SawarabiMincho-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DDC5C8B29F01D4F00A8FB0B /* SawarabiMincho-Regular.ttf */; };
+		7DDC5C8E29F01D4F00A8FB0B /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7DDC5C8C29F01D4F00A8FB0B /* OFL.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7D67FF682A24C1F600729B26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DABCD2A29C6F24600E1ED60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D67FF5F2A24C1F600729B26;
+			remoteInfo = MeishiKanri10ShareExtension;
+		};
 		7DABCD4929C6F24800E1ED60 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7DABCD2A29C6F24600E1ED60 /* Project object */;
@@ -48,11 +70,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7D67FF6E2A24C1F600729B26 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7D67FF6A2A24C1F600729B26 /* MeishiKanri10ShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7D22EB6C29C93D4D007CB36F /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		7D3A65DB2A124C7E00B888F1 /* MeishiKanri10.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeishiKanri10.entitlements; sourceTree = "<group>"; };
 		7D618A3329D7CCB1006BB47E /* ViewControllerKamiResist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerKamiResist.swift; sourceTree = "<group>"; };
 		7D618A3529D7DF7B006BB47E /* DBServiceKami.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBServiceKami.swift; sourceTree = "<group>"; };
 		7D618A3929D80646006BB47E /* KamiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamiTableViewCell.swift; sourceTree = "<group>"; };
+		7D67FF602A24C1F600729B26 /* MeishiKanri10ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MeishiKanri10ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D67FF622A24C1F600729B26 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		7D67FF652A24C1F600729B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		7D67FF672A24C1F600729B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D67FF6F2A24C43C00729B26 /* MeishiKanri10ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeishiKanri10ShareExtension.entitlements; sourceTree = "<group>"; };
+		7D67FF702A24CCB300729B26 /* ViewControllerDigitalScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDigitalScan.swift; sourceTree = "<group>"; };
+		7D67FF8C2A26226200729B26 /* IMG_0619_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0619_3.png; sourceTree = "<group>"; };
 		7D78F26529CED63300077D4C /* ViewControllerDigitalResist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDigitalResist.swift; sourceTree = "<group>"; };
 		7D7CE75129C95D7100483B90 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		7D7CE75329C95F7100483B90 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -75,9 +119,18 @@
 		7DB03CEB29C9775F0083EFC3 /* Uri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uri.swift; sourceTree = "<group>"; };
 		7DDC5C8629E5B60C00A8FB0B /* ViewControllerDigitalUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDigitalUpdate.swift; sourceTree = "<group>"; };
 		7DDC5C8829E8345800A8FB0B /* ViewControllerKamiUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerKamiUpdate.swift; sourceTree = "<group>"; };
+		7DDC5C8B29F01D4F00A8FB0B /* SawarabiMincho-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SawarabiMincho-Regular.ttf"; sourceTree = "<group>"; };
+		7DDC5C8C29F01D4F00A8FB0B /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7D67FF5D2A24C1F600729B26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DABCD2F29C6F24600E1ED60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,12 +155,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D67FF612A24C1F600729B26 /* MeishiKanri10ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				7D67FF6F2A24C43C00729B26 /* MeishiKanri10ShareExtension.entitlements */,
+				7D67FF622A24C1F600729B26 /* ShareViewController.swift */,
+				7D67FF642A24C1F600729B26 /* MainInterface.storyboard */,
+				7D67FF672A24C1F600729B26 /* Info.plist */,
+			);
+			path = MeishiKanri10ShareExtension;
+			sourceTree = "<group>";
+		};
+		7D67FF8B2A26220900729B26 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				7D67FF8C2A26226200729B26 /* IMG_0619_3.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
 		7DABCD2929C6F24600E1ED60 = {
 			isa = PBXGroup;
 			children = (
 				7DABCD3429C6F24600E1ED60 /* MeishiKanri10 */,
 				7DABCD4B29C6F24800E1ED60 /* MeishiKanri10Tests */,
 				7DABCD5529C6F24800E1ED60 /* MeishiKanri10UITests */,
+				7D67FF612A24C1F600729B26 /* MeishiKanri10ShareExtension */,
 				7DABCD3329C6F24600E1ED60 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +191,7 @@
 				7DABCD3229C6F24600E1ED60 /* MeishiKanri10.app */,
 				7DABCD4829C6F24800E1ED60 /* MeishiKanri10Tests.xctest */,
 				7DABCD5229C6F24800E1ED60 /* MeishiKanri10UITests.xctest */,
+				7D67FF602A24C1F600729B26 /* MeishiKanri10ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +199,9 @@
 		7DABCD3429C6F24600E1ED60 /* MeishiKanri10 */ = {
 			isa = PBXGroup;
 			children = (
+				7D67FF8B2A26220900729B26 /* icon */,
+				7D3A65DB2A124C7E00B888F1 /* MeishiKanri10.entitlements */,
+				7DDC5C8A29F01D4F00A8FB0B /* Sawarabi_Mincho */,
 				7DABCD3529C6F24600E1ED60 /* AppDelegate.swift */,
 				7D22EB6C29C93D4D007CB36F /* DBService.swift */,
 				7D618A3529D7DF7B006BB47E /* DBServiceKami.swift */,
@@ -138,6 +215,7 @@
 				7D618A3929D80646006BB47E /* KamiTableViewCell.swift */,
 				7D78F26529CED63300077D4C /* ViewControllerDigitalResist.swift */,
 				7DABCD3B29C6F24600E1ED60 /* Main.storyboard */,
+				7D67FF702A24CCB300729B26 /* ViewControllerDigitalScan.swift */,
 				7DDC5C8829E8345800A8FB0B /* ViewControllerKamiUpdate.swift */,
 				7DDC5C8629E5B60C00A8FB0B /* ViewControllerDigitalUpdate.swift */,
 				7D618A3329D7CCB1006BB47E /* ViewControllerKamiResist.swift */,
@@ -166,9 +244,35 @@
 			path = MeishiKanri10UITests;
 			sourceTree = "<group>";
 		};
+		7DDC5C8A29F01D4F00A8FB0B /* Sawarabi_Mincho */ = {
+			isa = PBXGroup;
+			children = (
+				7DDC5C8B29F01D4F00A8FB0B /* SawarabiMincho-Regular.ttf */,
+				7DDC5C8C29F01D4F00A8FB0B /* OFL.txt */,
+			);
+			path = Sawarabi_Mincho;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7D67FF5F2A24C1F600729B26 /* MeishiKanri10ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D67FF6B2A24C1F600729B26 /* Build configuration list for PBXNativeTarget "MeishiKanri10ShareExtension" */;
+			buildPhases = (
+				7D67FF5C2A24C1F600729B26 /* Sources */,
+				7D67FF5D2A24C1F600729B26 /* Frameworks */,
+				7D67FF5E2A24C1F600729B26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeishiKanri10ShareExtension;
+			productName = MeishiKanri10ShareExtension;
+			productReference = 7D67FF602A24C1F600729B26 /* MeishiKanri10ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		7DABCD3129C6F24600E1ED60 /* MeishiKanri10 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DABCD5C29C6F24800E1ED60 /* Build configuration list for PBXNativeTarget "MeishiKanri10" */;
@@ -176,10 +280,12 @@
 				7DABCD2E29C6F24600E1ED60 /* Sources */,
 				7DABCD2F29C6F24600E1ED60 /* Frameworks */,
 				7DABCD3029C6F24600E1ED60 /* Resources */,
+				7D67FF6E2A24C1F600729B26 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7D67FF692A24C1F600729B26 /* PBXTargetDependency */,
 			);
 			name = MeishiKanri10;
 			productName = MeishiKanri10;
@@ -232,6 +338,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					7D67FF5F2A24C1F600729B26 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					7DABCD3129C6F24600E1ED60 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -261,16 +370,31 @@
 				7DABCD3129C6F24600E1ED60 /* MeishiKanri10 */,
 				7DABCD4729C6F24800E1ED60 /* MeishiKanri10Tests */,
 				7DABCD5129C6F24800E1ED60 /* MeishiKanri10UITests */,
+				7D67FF5F2A24C1F600729B26 /* MeishiKanri10ShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7D67FF5E2A24C1F600729B26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D67FF662A24C1F600729B26 /* MainInterface.storyboard in Resources */,
+				7D67FF872A24FBD600729B26 /* Color.xcassets in Resources */,
+				7D67FF8F2A2628A700729B26 /* Assets.xcassets in Resources */,
+				7D67FF8E2A26226200729B26 /* IMG_0619_3.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DABCD3029C6F24600E1ED60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D67FF8D2A26226200729B26 /* IMG_0619_3.png in Resources */,
+				7DDC5C8E29F01D4F00A8FB0B /* OFL.txt in Resources */,
 				7DABCD4229C6F24700E1ED60 /* LaunchScreen.storyboard in Resources */,
+				7DDC5C8D29F01D4F00A8FB0B /* SawarabiMincho-Regular.ttf in Resources */,
 				7D7CE75229C95D7100483B90 /* Color.xcassets in Resources */,
 				7DABCD3F29C6F24700E1ED60 /* Assets.xcassets in Resources */,
 				7DABCD3D29C6F24600E1ED60 /* Main.storyboard in Resources */,
@@ -294,6 +418,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7D67FF5C2A24C1F600729B26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D67FF862A24FBCD00729B26 /* ViewControllerDigitalScan.swift in Sources */,
+				7D67FF892A24FBF300729B26 /* DBService.swift in Sources */,
+				7D67FF632A24C1F600729B26 /* ShareViewController.swift in Sources */,
+				7D67FF882A24FBDE00729B26 /* Color.swift in Sources */,
+				7D67FF8A2A24FC0A00729B26 /* Uri.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DABCD2E29C6F24600E1ED60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,9 +446,11 @@
 				7D9233DD29CE0DC500247825 /* DigitalTableViewCell.swift in Sources */,
 				7D618A3629D7DF7B006BB47E /* DBServiceKami.swift in Sources */,
 				7DB03CEC29C9775F0083EFC3 /* Uri.swift in Sources */,
+				7D67FF712A24CCB300729B26 /* ViewControllerDigitalScan.swift in Sources */,
 				7DABCD3629C6F24600E1ED60 /* AppDelegate.swift in Sources */,
 				7D7CE75429C95F7100483B90 /* Color.swift in Sources */,
 				7DABCD3829C6F24600E1ED60 /* SceneDelegate.swift in Sources */,
+				7D67FF822A24FA0F00729B26 /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +474,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7D67FF692A24C1F600729B26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D67FF5F2A24C1F600729B26 /* MeishiKanri10ShareExtension */;
+			targetProxy = 7D67FF682A24C1F600729B26 /* PBXContainerItemProxy */;
+		};
 		7DABCD4A29C6F24800E1ED60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7DABCD3129C6F24600E1ED60 /* MeishiKanri10 */;
@@ -349,6 +492,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7D67FF642A24C1F600729B26 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D67FF652A24C1F600729B26 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		7DABCD3B29C6F24600E1ED60 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -368,6 +519,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7D67FF6C2A24C1F600729B26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = MeishiKanri10ShareExtension/MeishiKanri10ShareExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4H5VQSK5FW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeishiKanri10ShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = pipit;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "NFCの使用";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PGM.MeishiKanri10.MeishiKanri10ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7D67FF6D2A24C1F600729B26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = MeishiKanri10ShareExtension/MeishiKanri10ShareExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4H5VQSK5FW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeishiKanri10ShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = pipit;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "NFCの使用";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LINKER_DISPLAYS_MANGLED_NAMES = NO;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PGM.MeishiKanri10.MeishiKanri10ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		7DABCD5A29C6F24800E1ED60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -418,6 +637,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -472,6 +692,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -485,23 +706,26 @@
 		7DABCD5D29C6F24800E1ED60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MeishiKanri10/MeishiKanri10.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A3HRVV2CPG;
+				DEVELOPMENT_TEAM = 4H5VQSK5FW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeishiKanri10/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = pipit;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NFCReaderUsageDescription = "";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "NFCの使用";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,32 +734,39 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = PGM.MeishiKanri10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7DABCD5E29C6F24800E1ED60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MeishiKanri10/MeishiKanri10.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A3HRVV2CPG;
+				DEVELOPMENT_TEAM = 4H5VQSK5FW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeishiKanri10/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = pipit;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NFCReaderUsageDescription = "";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "NFCの使用";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,9 +775,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = PGM.MeishiKanri10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -557,7 +792,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A3HRVV2CPG;
+				DEVELOPMENT_TEAM = 4H5VQSK5FW;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
@@ -577,7 +812,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A3HRVV2CPG;
+				DEVELOPMENT_TEAM = 4H5VQSK5FW;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
@@ -596,7 +831,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A3HRVV2CPG;
+				DEVELOPMENT_TEAM = 4H5VQSK5FW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = PGM.MeishiKanri10UITests;
@@ -614,7 +849,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A3HRVV2CPG;
+				DEVELOPMENT_TEAM = 4H5VQSK5FW;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = PGM.MeishiKanri10UITests;
@@ -629,6 +864,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7D67FF6B2A24C1F600729B26 /* Build configuration list for PBXNativeTarget "MeishiKanri10ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D67FF6C2A24C1F600729B26 /* Debug */,
+				7D67FF6D2A24C1F600729B26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7DABCD2D29C6F24600E1ED60 /* Build configuration list for PBXProject "MeishiKanri10" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
